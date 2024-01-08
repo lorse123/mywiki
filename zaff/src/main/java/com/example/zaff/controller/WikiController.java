@@ -29,6 +29,7 @@ public class WikiController {
     public String viewPage(@PathVariable Long id, Model model) {
         WikiPage page = wikiPageRepository.findTop1ById(id);
         model.addAttribute("page", page);
+        ;
       return "view";
     }
 }
