@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Wiki Home</title>
+</head>
+<body>
+    <h1>Wiki Pages</h1>
+    <ul>
+        <li th:each="page : ${pages}">
+            <a th:href="@{'/page/' + ${page.id}}" th:text="${page.title}"></a>
+        </li>
+    </ul>
+</body>
+</html>
